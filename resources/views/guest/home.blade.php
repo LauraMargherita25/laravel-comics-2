@@ -3,14 +3,14 @@
 @section('title', 'DCcomics - HomePage')
 
 @section('content')
-    <main>
+    <main class="bg_black">
         <div class="jumbo"></div>
         <div class="container">
             <h1>current series</h1>
             <ul class="grid">
                 @foreach ($comics as $comic)
                     <li class="card">
-                        <a href="{{ route('comic', ['id' => $comic['id']]) }}">
+                        <a href="{{ route('product', ['id' => $comic['id']]) }}">
                             <div class="img-wrapper">
                                 <img src="{{ $comic["thumb"] }}" alt="">
                             </div>
@@ -25,9 +25,9 @@
         </div>
     </main>
 
-    <style>
+    {{-- <style>
         main{
             background-color: black
         }
-    </style>
+    </style> --}}
 @endsection

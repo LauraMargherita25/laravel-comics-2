@@ -10,10 +10,12 @@
             <ul class="grid">
                 @foreach ($comics as $comic)
                     <li class="card">
-                        <div class="img-wrapper">
-                            <img src="{{ $comic["thumb"] }}" alt="">
-                        </div>
-                        <p>{{ $comic['title'] }}</p>
+                        <a href="{{ route('comic', ['id' => $comic['id']]) }}">
+                            <div class="img-wrapper">
+                                <img src="{{ $comic["thumb"] }}" alt="">
+                            </div>
+                            <p>{{ $comic['title'] }}</p>
+                        </a>
                     </li>
                 @endforeach
             </ul>

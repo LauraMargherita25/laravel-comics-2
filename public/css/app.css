@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --background_color: #1c1c1c;
+  --blue: #0282f9;
+  --gray: #303030;
+  --gray_text: #7a7878;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+header {
+  background-color: white;
+}
+header .container {
+  justify-content: space-between;
+}
+header .container .img_wrapper {
+  width: 100px;
+  height: 100px;
+  padding: 1rem;
+}
+header .container .img_wrapper img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .container li {
+  display: inline-block;
+  padding: 0 1rem;
+  border-bottom: 5px solid white;
+  text-transform: uppercase;
+}
+header .container li.active {
+  color: var(--blue);
+  border-bottom: 5px solid var(--blue);
+}
+header .container li a {
+  line-height: 100px;
+  display: inline-block;
+}
+
+footer {
+  background-image: url("../images/footer-bg.jpg");
+}
+footer .footer_top {
+  background-color: var(--blue);
+  color: white;
+  text-transform: uppercase;
+}
+footer .footer_top ul {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .footer_top ul li {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+footer .footer_top ul li .img-wrapper {
+  width: 45px;
+  height: 50px;
+  margin-right: 1rem;
+}
+footer .footer_top ul li .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+footer .footer_mid {
+  color: white;
+}
+footer .footer_mid .footer_mid_l {
+  width: 50%;
+  display: flex;
+}
+footer .footer_mid .footer_mid_l ul {
+  margin: 0 1rem;
+}
+footer .footer_mid .footer_mid_l ul h2 {
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+footer .footer_mid .footer_mid_l ul li {
+  margin-bottom: 0.3rem;
+  font-size: 13px;
+  color: var(--gray_text);
+}
+footer .footer_mid .footer_mid_r {
+  width: 50%;
+  height: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+footer .footer_mid .footer_mid_r img {
+  height: 150%;
+}
+footer .footer_btn {
+  padding: 2rem;
+  background-color: var(--gray);
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer_btn .sign-up_btn {
+  padding: 1rem;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+}
+footer .footer_btn .social {
+  display: flex;
+  align-items: center;
+}
+footer .footer_btn .social p {
+  padding: 1rem;
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 600;
+}
+footer .footer_btn .social img {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+main {
+  background-color: var(--background_color);
+}
+main .jumbo {
+  height: 500px;
+  background-image: url("../images/jumbotron.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .jumbo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+main .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  color: white;
+}
+main .container h1 {
+  padding: 0.5rem 2.5rem;
+  align-self: flex-start;
+  text-transform: uppercase;
+  background-color: var(--blue);
+  position: relative;
+  bottom: 43px;
+}
+main .container .grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+main .container .load-more_btn {
+  padding: 0.5rem 2.5rem;
+  text-transform: uppercase;
+  background-color: var(--blue);
+}
+
+.card {
+  width: calc(16.6666666667% - 1rem);
+  margin-bottom: 2rem;
+}
+.card .img-wrapper {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.card .img-wrapper img {
+  width: 100%;
+}

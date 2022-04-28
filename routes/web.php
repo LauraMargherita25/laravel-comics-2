@@ -66,17 +66,19 @@ Route::get('/', function () {
     return view('guest.home', $data);
 })->name('home');
 
-Route::get('/comics/{id}', function ($id) {
+Route::get('/{id}', function ($id) {
     $comics = collect(config('comics'));
 
-    $selectedComic = $comics -> firstwhere('id', $id);
+    $selectedComic = $comics->firstwhere('id', $id);
     if ($selectedComic === null) abort(404);
-
-    return view('guest.home', [
+    
+    return view('guest.product', [
+        'title' => $selectedComic['title'] . ' - DCcomics',
         'product' => $selectedComic
     ]);
-    dd($selectedComic);
-});
+    // $selectedComic = $comics->where('id', $id);
+    // return view('guest.product');
+})->name('product');
 
 Route::get('/comics', function () {
     return view('guest.comics');
